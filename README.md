@@ -26,7 +26,7 @@ One thing is for sure - we'd need to calculate how many Euros that way-too-expen
 
 ## Need some help?
 
-The [PHP basics](../0.Getting-started-with-PHP/PHP-basics.md) contains some helpful links to get you familiar with the language.
+The [PHP basics](https://github.com/becodeorg/gnt-verou-1-26/blob/master/3.The-Mountain/0.Getting-started-with-PHP/PHP-basics.md) contains some helpful links to get you familiar with the language.
 
 [//]: # "Coach note: below is a Github style spoiler"
 

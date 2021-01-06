@@ -4,24 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link href="styles.css" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <h1>VACATION TIME</h1>
-    <p>So you want to go on vacation but you have to convert every amount to euro, and vice-versa.<br>
-        Choose a destination and we will convert it for you!</p>
-    <form class="calc-curreny" method="post">
-        <select name="size" required>
-            <option value="">None</option>
-            <option value="Brazil">Brazil</option>
-            <option value="Australia">Australia</option>
-            <option value="Vietnam">Vietnam</option>
-        </select>
-        <input type="text" name="convert" placeholder="Amount in destination">
-        <input type="text" name="euro" placeholder="Amount in euro">
-        <button type="submit" name="submit">Convert</button>
-    </form>
+    <div id="container">
+        <h1>VACATION TIME</h1>
+        <p>So you want to go on vacation but you have to convert every amount to euro, and vice-versa.<br>
+            Choose a destination and we will convert it for you!</p>
+        <form class="calc-curreny" method="post">
+            <select name="size" required>
+                <option value="">None</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Australia">Australia</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Madagascar">Madagascar</option>
+            </select>
+            <input type="text" name="convert" placeholder="Amount in destination">
+            <input type="text" name="euro" placeholder="Amount in euro">
+            <button type="submit" name="submit">Convert</button>
+        </form>
+    </div>
     <?php
     if (isset($_POST['submit'])) {
         $amount = $_POST['convert'];
@@ -62,6 +67,17 @@
                 } else {
                     $convertedAmount = $euro * $exchangeRate;
                     echo $euro . " euro is " . $convertedAmount .  " Vietnamese Dong.<br>";
+                }
+                break;
+            case 'Madagascar':
+                $exchangeRate = 4673.87;
+                echo "The currency in " . $destination . " is Malagasy ariary.<br>";
+                if (empty($_POST['euro'])) {
+                    $convertedAmount = $amount * $exchangeRate;
+                    echo $amount . " Malagasy ariary is " . $convertedAmount . " euro.<br>";
+                } else {
+                    $convertedAmount = $euro * $exchangeRate;
+                    echo $euro . " euro is " . $convertedAmount .  " Malagasy ariary.<br>";
                 }
                 break;
         }
