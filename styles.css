@@ -1,4 +1,32 @@
-/* #container {
-  color: red;
-  border: 2px solid black;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(vacay.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(120, 120, 120, 0.5);
+  font-family: "Oxygen", sans-serif;
+}
+
+#container {
+  background-color: lightblue;
+  opacity: 0.9;
+  padding: 15px;
+  border-radius: 30px;
+  line-height: 1.4;
+}
+
+#php {
+  text-align: center;
+}
