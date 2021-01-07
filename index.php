@@ -15,7 +15,7 @@
         <p>So you want to go on vacation but you have to convert every amount to euro, and vice-versa.<br>
             Choose a destination and we will convert it for you!</p>
         <form class="calc-curreny" method="post">
-            <select name="size" required>
+            <select name="destination" required>
                 <option value="">None</option>
                 <option value="Brazil">Brazil</option>
                 <option value="Australia">Australia</option>
@@ -32,7 +32,8 @@
             ini_set('display_errors', '1');
             ini_set('display_startup_errors', '1');
             error_reporting(E_ALL);
-            if (isset($_POST['submit'])) {
+
+            if (isset($_POST['destination'])) {
                 $amount = $_POST['convert'];
                 $euro = $_POST['euro'];
                 $destination = $_POST['size'];
